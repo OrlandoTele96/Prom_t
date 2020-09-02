@@ -1,8 +1,16 @@
 <resources>
     <string name="app_name">prom_app</string>
 
+    <!-- WELCOME ACT-->
     <string name="Prom_app">Prom</string>
     <string name="wel">Bienvenido</string>
-    <string name="register">Si no eres usuario </string>
+    <string name="register">Si no eres usuario, regístrate</string>
+    <!--MAIN-->
+
+    <!--Section for log-->
+    <string name="welcome">WELCOME</string>
+    <string name="wel_validated">User ID is validated</string>
+    <string name="wel_nvalidated">User is not validated</string>
+
 
 </resources>
