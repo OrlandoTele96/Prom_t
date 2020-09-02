@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">prom_app</string>
+
+    <string name="Prom_app">Prom</string>
+    <string name="wel">Bienvenido</string>
+    <string name="register">Si no eres usuario </string>
+
+</resources>
