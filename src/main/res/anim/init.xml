@@ -4,7 +4,7 @@
     android:duration="800"
     android:fillEnabled="true"
     android:fillBefore="true"
-    android:startOffset="1500"
+    android:startOffset="3500"
     >
 
     <alpha

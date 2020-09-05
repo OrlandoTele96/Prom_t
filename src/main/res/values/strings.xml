@@ -5,6 +5,8 @@
     <string name="Prom_app">Prom</string>
     <string name="wel">Bienvenido</string>
     <string name="register">Si no eres usuario, regístrate</string>
+    <string name="txtemail">Type your email</string>
+    <string name="txtpswd">Type your password</string>
     <!--MAIN-->
 
     <!--Section for log-->
