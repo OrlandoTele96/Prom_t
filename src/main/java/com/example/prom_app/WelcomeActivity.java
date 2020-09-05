@@ -20,7 +20,7 @@ public class WelcomeActivity extends AppCompatActivity {
     ImageButton ibtnLogin,ibtnRegistration;
     EditText etEmail,etPswd;
 
-    Animation frombg,frombrand,fromwhiteletters,frominit,frombg_trans;
+    Animation frombg,frombrand,fromwhiteletters,frominit;
 
     User user= new User("","","","","");;
 
