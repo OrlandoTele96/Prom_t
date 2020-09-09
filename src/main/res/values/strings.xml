@@ -7,6 +7,12 @@
     <string name="register">Si no eres usuario, regístrate</string>
     <string name="txtemail">Type your email</string>
     <string name="txtpswd">Type your password</string>
+    <!--Registration ACT-->
+    <string name="Reg_username">Your name</string>
+    <string name="Reg_gen">Genero</string>
+    <string name="Reg_masc">Masculino</string>
+    <string name="Reg_fem">Femenino</string>
+    <string name="Reg_otro">Otro</string>
     <!--MAIN-->
 
     <!--Section for log-->
