@@ -22,7 +22,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
     Animation frombg,frombrand,fromwhiteletters,frominit;
 
-    User user= new User("","","","","");;
+    User user=new User("","","","","","");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

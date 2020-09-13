@@ -13,6 +13,9 @@
     <string name="Reg_masc">Masculino</string>
     <string name="Reg_fem">Femenino</string>
     <string name="Reg_otro">Otro</string>
+    <string name="Reg_bd">Fecha de nacimiento</string>
+    <string name="Reg_yy_mm_dd">YY/MM/DD</string>
+    <string name="Reg_addr">Dirección</string>
     <!--MAIN-->
 
     <!--Section for log-->
