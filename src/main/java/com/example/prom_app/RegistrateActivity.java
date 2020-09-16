@@ -21,14 +21,18 @@ import java.util.Calendar;
 public class RegistrateActivity extends AppCompatActivity {
 
     ImageButton ibtnAddPhoto;
-    EditText etUserName;
+    EditText etUserName,etAddress;
     TextView tvGen,tvBD,tvYYMMDD;
     RadioGroup radioGroup;
     RadioButton rbtnGen;
+    ImageButton ibtnnxt;
 
     DatePickerDialog.OnDateSetListener mDateListener;
 
-    User user=new User("","","","","","");
+    //User user=new User("","","","","","");
+
+    String Gen;
+    int y,m,d;
 
 
     @Override
@@ -42,6 +46,9 @@ public class RegistrateActivity extends AppCompatActivity {
         radioGroup = findViewById(R.id.radioGroup);
         tvBD =findViewById(R.id.tvBD);
         tvYYMMDD = findViewById(R.id.tvYYMMDD);
+        ibtnnxt = findViewById(R.id.ibtnnxt);
+        etAddress = findViewById(R.id.etAddress);
+
 
         tvYYMMDD.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,15 +66,94 @@ public class RegistrateActivity extends AppCompatActivity {
         mDateListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                Log.d("REGISTRO","year : "+year+"month : "+month+"day : "+dayOfMonth);
+                //Log.d("REGISTRO","year : "+year+"month : "+month+"day : "+dayOfMonth);
+                Log.d(getResources().getString(R.string.registrate),getResources().getString(R.string.reg_year)+year+getResources().getString(R.string.reg_month)+month+getResources().getString(R.string.reg_day)+dayOfMonth);
+                y = year;
+                m =month+1;
+                d=dayOfMonth;
+                tvYYMMDD.setHint(y+getResources().getString(R.string.guion)+m+getResources().getString(R.string.guion)+d);
             }
         };
+
+        ibtnnxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(validate()){
+                    try{
+                        Log.d(getResources().getString(R.string.registrate),getResources().getString(R.string.reg_uservalidated));
+                        Log.d(getResources().getString(R.string.registrate),getResources().getString(R.string.reg_usrvl_name));
+                        Log.d(getResources().getString(R.string.registrate),getResources().getString(R.string.reg_usrvl_gen));
+                        Log.d(getResources().getString(R.string.registrate),getResources().getString(R.string.reg_usrvl_bd));
+                        Log.d(getResources().getString(R.string.registrate),getResources().getString(R.string.reg_usrvl_add));
+                        User user = new User(etUserName.getText().toString(),etAddress.getText().toString(),Gen,y,m,d);
+                    }catch (Exception e){
+
+                    }
+                }
+            }
+        });
     }
 
     public void checkButton(View v)
     {
         int rbtnID = radioGroup.getCheckedRadioButtonId();
         rbtnGen = findViewById(rbtnID);
-        Toast.makeText(this,"Selected button : "+rbtnGen.getText(),Toast.LENGTH_SHORT).show();
+        Log.d(getResources().getString(R.string.registrate),getResources().getString(R.string.reg_gen)+rbtnGen.getText());
+        Gen=rbtnGen.getText().toString();
+        //If otro appears other edit text
+    }
+
+    public boolean checkGen(){
+        if (Gen != null){
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public boolean checkDate(){
+
+        String date = tvYYMMDD.getHint().toString();
+        String y = date.substring(0,4);
+
+        if(y!="YYYY")
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean checkName(){
+        if (etUserName.getText().length()!=0)
+        {
+            return true;
+        }
+        return false;
+    }
+    public boolean checkAddress(){
+        if (etAddress.getText().length()!=0)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean validate(){
+        if(checkName()&checkGen()&checkDate()&checkAddress()){
+            // Validate date
+            Calendar cal = Calendar.getInstance();
+            int year = cal.get(Calendar.YEAR);
+            Log.d("REGISTRATE","selcted : "+y+"current year : "+year);
+            if(y>=year){
+                Toast.makeText(RegistrateActivity.this,getResources().getString(R.string.Reg_datewrong),Toast.LENGTH_SHORT).show();
+                return false;
+            }
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }

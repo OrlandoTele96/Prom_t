@@ -14,14 +14,26 @@
     <string name="Reg_fem">Femenino</string>
     <string name="Reg_otro">Otro</string>
     <string name="Reg_bd">Fecha de nacimiento</string>
-    <string name="Reg_yy_mm_dd">YY/MM/DD</string>
+    <string name="Reg_yy_mm_dd">YYYY/MM/DD</string>
     <string name="Reg_addr">Dirección</string>
+    <string name="guion">/</string>
+    <string name="Reg_datewrong">Debes tener almenos un año de nacido, vuelve a seleccionar tu fecha</string>
     <!--MAIN-->
 
     <!--Section for log-->
     <string name="welcome">WELCOME</string>
     <string name="wel_validated">User ID is validated</string>
     <string name="wel_nvalidated">User is not validated</string>
+    <string name="registrate">REGISTRATE</string>
+    <string name="reg_gen">Gender : </string>
+    <string name="reg_year">Year : </string>
+    <string name="reg_month">Month : </string>
+    <string name="reg_day">Day : </string>
+    <string name="reg_uservalidated">User validation is successful</string>
+    <string name="reg_usrvl_name">User name : </string>
+    <string name="reg_usrvl_gen">User gender : </string>
+    <string name="reg_usrvl_bd">User birthday : </string>
+    <string name="reg_usrvl_add">User address : </string>
 
 
 </resources>
