@@ -3,6 +3,7 @@ package com.example.prom_app;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -81,11 +82,17 @@ public class RegistrateActivity extends AppCompatActivity {
                 if(validate()){
                     try{
                         Log.d(getResources().getString(R.string.registrate),getResources().getString(R.string.reg_uservalidated));
-                        Log.d(getResources().getString(R.string.registrate),getResources().getString(R.string.reg_usrvl_name));
-                        Log.d(getResources().getString(R.string.registrate),getResources().getString(R.string.reg_usrvl_gen));
-                        Log.d(getResources().getString(R.string.registrate),getResources().getString(R.string.reg_usrvl_bd));
-                        Log.d(getResources().getString(R.string.registrate),getResources().getString(R.string.reg_usrvl_add));
+                        Log.d(getResources().getString(R.string.registrate),getResources().getString(R.string.reg_usrvl_name)+etUserName.getText().toString());
+                        Log.d(getResources().getString(R.string.registrate),getResources().getString(R.string.reg_usrvl_gen)+Gen);
+                        Log.d(getResources().getString(R.string.registrate),getResources().getString(R.string.reg_usrvl_bd)+y+getResources().getString(R.string.guion)+m+getResources().getString(R.string.guion)+d);
+                        Log.d(getResources().getString(R.string.registrate),getResources().getString(R.string.reg_usrvl_add)+etAddress.getText().toString());
                         User user = new User(etUserName.getText().toString(),etAddress.getText().toString(),Gen,y,m,d);
+
+                        Intent intent = new Intent(RegistrateActivity.this,activity_registrate_email.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putSerializable("USER",user);
+                        intent.putExtras(bundle);
+                        startActivity(intent);
                     }catch (Exception e){
 
                     }
@@ -145,7 +152,6 @@ public class RegistrateActivity extends AppCompatActivity {
             // Validate date
             Calendar cal = Calendar.getInstance();
             int year = cal.get(Calendar.YEAR);
-            Log.d("REGISTRATE","selcted : "+y+"current year : "+year);
             if(y>=year){
                 Toast.makeText(RegistrateActivity.this,getResources().getString(R.string.Reg_datewrong),Toast.LENGTH_SHORT).show();
                 return false;

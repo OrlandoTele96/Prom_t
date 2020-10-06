@@ -10,5 +10,9 @@ public class activity_registrate_email extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrate_email);
+
+        Bundle bundle = new Bundle();
+
+        bundle = getIntent().getExtras();
     }
 }

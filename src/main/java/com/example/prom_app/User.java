@@ -1,6 +1,8 @@
 package com.example.prom_app;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     String user_name, ID;
     String name,age, location;
     String gen;
