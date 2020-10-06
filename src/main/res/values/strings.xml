@@ -5,8 +5,8 @@
     <string name="Prom_app">Prom</string>
     <string name="wel">Bienvenido</string>
     <string name="register">Si no eres usuario, regístrate</string>
-    <string name="txtemail">Type your email</string>
-    <string name="txtpswd">Type your password</string>
+    <string name="txtemail">Escribe tu email</string>
+    <string name="txtpswd">Escribe tu contraseña</string>
     <!--Registration ACT-->
     <string name="Reg_username">Your name</string>
     <string name="Reg_gen">Genero</string>
@@ -18,6 +18,7 @@
     <string name="Reg_addr">Dirección</string>
     <string name="guion">/</string>
     <string name="Reg_datewrong">Debes tener almenos un año de nacido, vuelve a seleccionar tu fecha</string>
+    <string name="Y">YYYY</string>
     <!--MAIN-->
 
     <!--Section for log-->
@@ -34,6 +35,12 @@
     <string name="reg_usrvl_gen">User gender : </string>
     <string name="reg_usrvl_bd">User birthday : </string>
     <string name="reg_usrvl_add">User address : </string>
+    <string name="EMAILPSSWD">EMAILPSSWD</string>
+    <string name="empss_vlted">User information is correct</string>
+    <string name="empss_id_gen">User id was generated : </string>
+    <string name="empss_email">User Email : </string>
+    <!-- Bundles-->
+    <string name="usr_bundle">USER</string>
 
 
 </resources>

@@ -90,7 +90,7 @@ public class RegistrateActivity extends AppCompatActivity {
 
                         Intent intent = new Intent(RegistrateActivity.this,activity_registrate_email.class);
                         Bundle bundle = new Bundle();
-                        bundle.putSerializable("USER",user);
+                        bundle.putSerializable(getResources().getString(R.string.usr_bundle),user);
                         intent.putExtras(bundle);
                         startActivity(intent);
                     }catch (Exception e){
@@ -125,7 +125,7 @@ public class RegistrateActivity extends AppCompatActivity {
         String date = tvYYMMDD.getHint().toString();
         String y = date.substring(0,4);
 
-        if(y!="YYYY")
+        if(y!=getResources().getString(R.string.Y))
         {
             return true;
         }

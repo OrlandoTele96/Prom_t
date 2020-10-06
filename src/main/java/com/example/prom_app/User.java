@@ -97,4 +97,8 @@ public class User implements Serializable {
     public void setGen(String gen) {
         this.gen = gen;
     }
+
+    public void calcID(){
+        this.ID = "1";
+    }
 }
