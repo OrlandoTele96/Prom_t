@@ -2,6 +2,7 @@ package com.example.prom_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -38,6 +39,8 @@ public class activity_registrate_email extends AppCompatActivity {
                         Log.d(getResources().getString(R.string.EMAILPSSWD),getResources().getString(R.string.empss_email)+etEmail_r.getText().toString());
                         user.calcID();
                         Log.d(getResources().getString(R.string.EMAILPSSWD),getResources().getString(R.string.empss_id_gen)+user.getID());
+                        Intent intent = new Intent(activity_registrate_email.this,MainActivity.class);
+                        startActivity(intent);
                     }catch (Exception e)
                     {
 
